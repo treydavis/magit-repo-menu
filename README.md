@@ -5,4 +5,4 @@ A simple way to `magit-status` local and remote git repositories by selecting an
 
 ###Keys
 `g` refresh
-`<RET>` run `magit-status` with this repo
+`<RET>` run `magit-status` with repo under point
