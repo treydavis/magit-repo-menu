@@ -18,10 +18,12 @@
     (insert-file-contents filePath)
     (buffer-string)))
 
+(defun emacs-path (p)
+  (format "%s%s" user-emacs-directory p))
+
 (defun print-list ()
   (interactive)
-  (setq tabulated-list-entries (read (get-string-from-file "reposlist")))
-  ;(message "%s" 'tabulated-list-entries)
+  (setq tabulated-list-entries (read (get-string-from-file (emacs-path "reposlist"))))
   (tabulated-list-print t))
 
 (defun magit-repo-menu ()
