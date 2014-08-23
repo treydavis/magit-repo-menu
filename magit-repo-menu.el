@@ -26,8 +26,10 @@
   (setq tabulated-list-entries (read (get-string-from-file (emacs-path "reposlist"))))
   (tabulated-list-print t))
 
-(defun magit-repo-menu ()
+(defun show-magit-repo-menu ()
   (interactive)
   (pop-to-buffer "*REPO MENU MODE*" nil)
   (repo-menu-mode)
   (print-list))
+
+(provide 'magit-repo-menu)
